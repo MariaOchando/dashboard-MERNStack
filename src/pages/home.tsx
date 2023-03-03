@@ -1,8 +1,9 @@
 import React from 'react';
 import { useList } from '@pankod/refine-core/dist/hooks/data/useList';
 import { Typography, Box, Stack } from '@pankod/refine-mui';
+import TotalRevenue from 'components/charts/TotalRevenue';
 import PieChart from 'components/charts/PieChart';
-
+import PropertyReferrals from 'components/charts/PropertyReferrals';
 const home = () => {
   return (
     <Box>
@@ -36,6 +37,10 @@ const home = () => {
           colors={["#475be8", "#e4e8ef"]}
         />
       </Box>
+      <Stack mt="25px" width="100%" direction={{ xs: 'column', lg: 'row' }}>
+        <TotalRevenue />
+        <PropertyReferrals />
+      </Stack>
     </Box>
   )
 }
